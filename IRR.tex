@@ -15,8 +15,8 @@
 %% and
 %% http://www.ieee.org/
 
-% !TeX spellcheck = en_US
-
+% !TeX spellcheck = en_GB
+% !TeX root = IRR.tex
 
 % *** Authors should verify (and, if needed, correct) their LaTeX system  ***
 % *** with the testflow diagnostic prior to trusting their LaTeX platform ***
@@ -302,7 +302,7 @@
 % figure. The latest version and documentation can be found at:
 % http://www.ctan.org/tex-archive/macros/latex/base/
 
-
+\usepackage{adjustbox}
 
 \usepackage{stfloats}
 % stfloats.sty was written by Sigitas Tolusis. This package gives LaTeX2e
@@ -820,7 +820,117 @@ The GIF target for commercial deployment of the MSR is 2025 \cite{GenIVRoadmap} 
 %Need to consider how to condense this down and make it as coherent as possible.
 %Expected to end page 5/start of page 6.
 
-Having considered the technology presented in each Gen IV reactor design, it is necessary to reflect on the scale and size of challenges to the deployment of the technology.
+Having considered the technology presented in each Gen IV reactor design, an assessment of the commercial readiness can be undertaken.
+Ultimately, the commercial viability of each design is dictated by the ability of Gen IV technology to resolve the issues facing global energy supply for a given cost.
+
+\subsection{Technology Assessment}
+The UK nuclear R\&D partnership National Nuclear Laboratory has reviewed the 6 Gen IV reactor technologies in a UK deployment context.
+A multi-attribute utility analysis was performed for each of the technologies against a set of performance metrics covering factors such as safety, economics and technology development.
+A subset of these metrics have been selected and are presented in table \ref{table:metrics}.
+The same analysis was performed for current Gen III LWR technology as a baseline for comparison.
+
+There are severe limitations to this type of analysis.
+Efforts have been made to remove subjective bias from the analysis by incorporating reviewers' comments.
+Additionally, there is no attempt to weight the corresponding factors according to importance.
+Therefore the values given in table \ref{table:metrics} should be used only as a basis for general comparison.
+
+
+
+
+\begin{table}[!tb]
+% increase table row spacing, adjust to taste
+\renewcommand{\arraystretch}{1}
+% if using array.sty, it might be a good idea to tweak the value of
+% \extrarowheight as needed to properly center the text within the cells
+\caption{Gen IV Technology Aggregate Scores \cite{nnl} (out of 4, 4 being best)}
+\label{table:metrics}
+\centering
+% Some packages, such as MDW tools, offer better commands for making tables
+% than the plain LaTeX2e tabular which is used here.
+\begin{adjustbox}{width=0.47\textwidth,keepaspectratio}
+\begin{tabular}{|c|c|c|c|c|c|c|c|}
+\hline
+\textbf{Metric} & \textbf{SFR} & \textbf{GFR} & \textbf{LFR} & \textbf{VHTR} & \textbf{SCWR} & \textbf{MSR} & \textbf{LWR}\\
+\hline
+Fuel Utilisation 			& 4 & 4 & 4 & 1 & 1 & 4 & 1 \\ \hline
+%Spent fuel mass 			& 3 & 3 & 3 & 1 & 2 & 2 & 2 \\ \hline
+VHLW volume			& 3 & 3 & 3 & 1 & 2 & 3 & 2\\ \hline
+%Long term heat output 		& 3 & 3 & 3 & 2 & 2 & 3 & 2\\ \hline
+Long term radiotoxicity 		& 3 & 3 & 3 & 2 & 2 & 3 & 2\\ \hline
+Environmental impact 		& 4 & 4 & 4 & 3 & 3 & 4 & 3\\ \hline
+%Separated materials		& 2 & 2 & 2 & 4 & 3 & 3 & 3\\ \hline
+%Spent fuel characteristics	& 2 & 2 & 2 & 4 & 2 & 4 & 2\\ \hline
+%Sabotage resistance		& 3 & 3 & 3 & 4 & 3 & 1 & 3\\ \hline
+Reliability				& 3 & 3 & 3 & 4 & 3 & 2 & 3\\ \hline
+%Worker exposures		& 2 & 2 & 2 & 4 & 3 & 2 & 3\\ \hline
+Safety				& 2 & 2 & 2 & 4 & 3 & 2 & 3\\ \hline
+Reactivity control			& 2 & 2 & 2 & 3 & 2 & 3 & 2\\ \hline
+Decay heat removal		& 2 & 2 & 2 & 4 & 2 & 3 & 2\\ \hline
+%Low uncertainties on dominant	& 3 & 1 & 2 & 3 & 1 & 1 & 3\\ \hline
+Fuel thermal response		& 3 & 1 & 3 & 4 & 1 & 3 & 1\\ \hline
+Scale of demonstration		& 3 & 1 & 2 & 3 & 1 & 1 & 4\\ \hline
+%Source term			& 1 & 1 & 1 & 4 & 2 & 1 & 2\\ \hline
+%Energy release mechanisms	& 1 & 3 & 3 & 4 & 1 & 3 & 1\\ \hline
+%System response times		& 3 & 1 & 3 & 4 & 1 & 2 & 1\\ \hline
+%Effective hold			& 1 & 1 & 1 & 4 & 2 & 2 & 2\\ \hline
+Capital costs				& 1 & 1 & 1 & 2 & 2 & 2 & 2\\ \hline
+Production costs			& 2 & 2 & 2 & 2 & 2 & 1 & 2\\ \hline
+Construction duration		& 2 & 2 & 2 & 3 & 2 & 2 & 2\\ \hline
+Development costs			& 2 & 1 & 2 & 3 & 1 & 1 & 4\\ \hline
+R\&D costs				& 2 & 1 & 2 & 3 & 1 & 1 & 4\\ \hline
+Waste management		& 3 & 3 & 3 & 3 & 2 & 4 & 2\\ \hline
+Load follow capability		& 2 & 2 & 2 & 3 & 2 & 3 & 2\\ \hline
+Scalability				& 2 & 2 & 2 & 3 & 2 & 3 & 2\\ \hline
+Timescales to deployment		& 3 & 1 & 2 & 2 & 1 & 1 & 4\\ \hline
+Technology Readiness Level	& 3 & 1 & 2 & 3 & 1 & 1 & 4\\ \hline
+%Flexibility of location		& 2 & 2 & 2 & 3 & 2 & 2 & 2\\ \hline
+%Waste arisings			& 3 & 3 & 3 & 2 & 2 & 3 & 2\\ \hline
+Security				& 2 & 2 & 2 & 4 & 2 & 2 & 2\\ \hline
+%Number and size of reactors needed&2&2& 2 & 1 & 2 & 3 & 2\\ \hline
+Associated fuel cycle		& 1 & 1 & 1 & 1 & 3 & 1 & 4\\ \hline
+Proliferation resistance		& 2 & 2 & 2 & 4 & 3 & 2 & 3\\ \hline
+Ease of construction		& 1 & 1 & 1 & 3 & 2 & 1 & 2\\ \hline
+Sustainability				& 4 & 4 & 4 & 1 & 1 & 4 & 1\\ \hline
+Cogeneration			&2&3& 2 & 4 & 2 & 3 &  1\\ \hline
+Decommissioning costs		& 2 & 2 & 2 & 3 & 3 & 2 & 3\\ \hline
+Primary purpose			& 3 & 3 & 3 & 4 & 2 & 3 & 1\\ \hline
+\textbf{Total}			&\textbf{68}&\textbf{59}&\textbf{65}&\textbf{80}&\textbf{54}&\textbf{65}&\textbf{68}  \\ \hline
+\end{tabular}
+\end{adjustbox}
+\end{table}
+
+The analysis shows a clear preference for the VHTR, while the SFR, LFR and MSR are all approximately comparable to current LWR technology.
+Fast reactor technology has advantages in terms of fuel sustainability and waste minimisation, but suffer in the analysis due to technological feasibility.
+The SFR is the most proven design and it could be argued that this system is the most technologically feasible of all the fast reactor designs.
+The VHTR benefits from a wide network of support within the GIF, partly due to the prospect of commercial scale hydrogen production.
+This combined with operating prototype designs makes the VHTR a prime candidate for deployment.
+
+\subsection{Needs Assessment}
+The deployment of Gen IV technology is not dependent solely on the technology offering.
+It must also resolve a number of social, economic, political and sustainability issues.
+
+While other renewable technologies face social opposition, nuclear technology is often the most emotive.
+A fundamental mistrust of the industry alongside a misunderstanding of technology and safety makes it difficult to deploy any nuclear technology.
+The social issue is particularly apparent in discussions involving waste and safety, where technical risk assessments often have very little impact on public opinion \cite{Marques2010a}.
+Companies hoping to deploy Gen IV technology must carefully engage with the public in order to gain a level of acceptance.
+
+Gen IV R\&D progress is suffering due to the poor economic climate \cite{nnl}.
+Additionally, there are issues in gaining the necessary investment to bring Gen IV concepts to a commercially deployable state \cite{Bhatnagar2011}.
+The economics of mega-projects must also be understood.
+The deployment of Areva EPR technology at Flamanville and Olkilhuoto illustrates the issues with large scale power plant construction. 
+These include first-of-a-kind issues and poor forecasting which have lead to a significant cost to the operator \cite{Locatelli2013}.
+
+The political framework for the deployment of Gen IV technology must also be developed.
+The response to Fukushima has been a deterent to worldwide nuclear investment.
+The political response was to temporarily shutdown the countries 11 reactors, of which 6 have been permanently condemned \cite{schneider2012nuclear}.
+This had a catastrophic impact on the operating company TEPCO.
+There are also less direct political risks, including policies on fracking, and energy policy in general.
+
+The need to cut greenhouse gas emissions is a primary driver of new nuclear technology.
+However, the current nuclear fuel cycle is not sustainable, with known reserves forecast to last 80 years under current consumption levels \cite{Marques2010a}.
+A major driver for Gen IV technology is the need to use uranium reserved more effectively.
+This is usually through fast reactor technology and closing the fuel cycle, which can increase the forecast by around 30 times \cite{Marques2010a}.
+The reduction and safe disposal of waste is another driver toward Gen IV fast reactor technology.
 
 
 
@@ -832,6 +942,8 @@ Having considered the technology presented in each Gen IV reactor design, it is 
 %If so which and why?
 %Expected to halfway page 5.
 %Leaves space for references and appendix.
+
+
 
 \bibliographystyle{IEEEtran}
 \bibliography{IRRBib}
